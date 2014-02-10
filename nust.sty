@@ -1,0 +1,155 @@
+% author Khalid Latif
+% created on   09-Feb-2009
+
+
+%\renewcommand{\figurename}{Fig.}
+%\renewcommand{\tablename}{Tab.}
+\renewcommand{\contentsname}{Table of Contents}
+
+
+% Theorem and Algorithm commands
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{algorithm}{Algorithm}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+
+% Subtitle, Authors Registration Nummer and Address
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\subtitle{} %Default empty sub-title
+\newcommand{\regno}[1]{\gdef\@regno{#1}}
+\newcommand{\address}[1]{\gdef\@address{#1}}
+
+% Title of the degree
+% Some of the degree program are defined below
+\newcommand{\degree}[1]{\gdef\@degree{#1}}
+
+\def\MSIT{Masters of Science in Information Technology (MS IT)}
+\def\MSCSE{Masters in Communication Systems Engineering (MS CSE)}
+\def\MSCCS{Masters in Computer and Communication Security (MS CCS)}
+
+% School name
+% Some of the schools are defined below
+\newcommand{\school}[1]{\gdef\@school{#1}}
+\def\NBS{NUST Business School}
+\def\SEECS{School of Electrical Engineering and Computer Science}
+\def\SCEE{School of Civil and Environment Engineering}
+\def\SCME{School of Chemical and Material Engineering}
+
+
+% Superviser's name and affiliation
+\newcommand{\adviser}[1]{\gdef\@adviser{#1}}
+\newcommand{\adviserAffiliation}[1]{\gdef\@adviserAffiliation{#1}}
+\adviserAffiliation{} % Default empty affiliation
+
+% Reset page numbering to 'arabic'
+\newcommand{\resetpagenumbering}{
+	\cleardoublepage
+	\pagenumbering{arabic}
+}
+
+\newcommand{\evaluationcommitteeapproval}[3]{
+\chapter*{Approval}
+It is certified that the contents and form of the thesis entitled
+``\textbf{\@title}" submitted by \textbf{\@author} have been found satisfactory
+for the requirement of the degree.
+
+\vspace*{\stretch{2}}
+\noindent
+Advisor: \textbf{\underline{\@adviser}}\\
+\vspace*{10pt}\noindent
+Signature: \line(1,0){100}\\
+Date: \line(1,0){100}
+
+\vspace*{\stretch{2}}
+
+\begin{flushright}
+Committee Member 1: \textbf{\underline{#1}}\\
+\vspace*{10pt}\noindent
+Signature: \line(1,0){100}\\
+Date:  \line(1,0){100}
+
+\vspace*{\stretch{1}}
+
+Committee Member 2: \textbf{\underline{#2}}\\
+\vspace*{10pt}\noindent
+Signature: \line(1,0){100}\\
+Date:  \line(1,0){100}
+
+\vspace*{\stretch{1}}
+
+Committee Member 3: \textbf{\underline{#3}}\\
+\vspace*{10pt}\noindent
+Signature: \line(1,0){100}\\
+Date:  \line(1,0){100}
+\end{flushright}
+}
+
+\newcommand{\certificateoforiginality}{
+\chapter*{Certificate of Originality}
+I hereby declare that this submission is my own work and to the best of my
+knowledge it contains no materials previously published or written by another
+person, nor material which to a substantial extent has been accepted for the
+award of any degree or diploma at NUST SEECS or at any other educational
+institute, except where due acknowledgement has been made in the thesis. Any
+contribution made to the research by others, with whom I have worked at NUST
+SEECS or elsewhere, is explicitly acknowledged in the thesis.
+
+I also declare that the intellectual content of this thesis is the product of my
+own work, except for the assistance from others in the project's design and
+conception or in style, presentation and linguistics which has been
+acknowledged.
+
+\begin{flushright}
+Author Name: \textbf{\underline{\@author}} %\line(1,0){100}
+
+Signature: \line(1,0){100}
+\end{flushright}
+}
+
+% Redefine 'maketitle' command to make use of adviser details and NUST emblem
+\renewcommand{\maketitle}{
+
+\begin{titlepage}
+\begin{center}
+    {\LARGE\textbf{\@title}}\\
+    {\large\textbf\@subtitle}\\
+    
+    \vspace*{\stretch{2}}
+    
+    \includegraphics[width=0.30\textwidth]{nust.jpg}
+    
+    \vspace*{\stretch{2}}
+    
+    \begin{large}
+   	By\\
+   	\textbf{\@author}\\
+   	\expandafter\textbf{\@regno} \\
+    	
+   	\vspace*{\stretch{2}}
+     	
+   	Supervisor\\
+   	\textbf{\@adviser} \\
+   	\textbf{\@adviserAffiliation}\\
+   	\end{large}
+
+    \vspace*{\stretch{3}}
+ 
+   	A thesis submitted in partial fulfillment of the requirements
+   	for the degree of {\@degree}\\
+ 
+   	\vspace*{\stretch{2}}
+   	
+   	\begin{large}
+   	In\\
+   	{\@school},\\
+   	National University of Sciences and Technology (NUST),\\
+   	Islamabad, Pakistan.
+     	
+   	\vspace*{\stretch{2}}
+    	
+   	(\@date)
+    \end{large}
+	
+\end{center}
+\end{titlepage}
+\pagenumbering{roman}
+}
