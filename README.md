@@ -1,4 +1,4 @@
-# NUST Thesis Style
+# NUST SEECS Thesis Style
 
 ## Document Style and Packages
 
@@ -12,18 +12,18 @@
 
 ## Title Page
 ```TeX
-\title{Temporal Traceability in Evolving Ontologies}
+\title{Main Title}
 \subtitle{Optional sub-title}
 
-\author{Asad Masood Khattak}
-\regno{2006-NUST-MS-PhD IT-19}
+\author{Student Name}
+\regno{Student Registration}
 \degree{\MSIT} % MSCSE, MSCCS
 \school{\SEECS}
 
-\adviser{Dr. Khalid Latif}
+\adviser{Supervisor}
 \adviserAffiliation{Department of Computing}
 
-\date{February 2009}
+\date{February 2022}
 
 % \setcounter{tocdepth}{2}
 % \setstretch{1.1}
@@ -89,14 +89,14 @@ This definition is placed within a chapter so is its number.
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Reference Type} & \textbf{Citation}\\ \hline
-Article & \cite{Allen83,Tversky77}\\ \hline
-Book & \cite[p.127-133]{Chakrabarti03}\\ \hline
-InProceedings & \cite{Fensel02}\\ \hline
-InCollection & \cite{Boster05}\\ \hline
-PhD Dissertation & \cite{Boardman04}\\ \hline
-Masters Thesis & \cite{Chartrand03}\\ \hline
-Technical Report & \cite{Beckett04-RDF-XML}\\ \hline
-Misc & \cite{Economist07-web}\\ \hline
+Article & \cite{khattak2019perception}\\ \hline
+Book & \cite[p.127-133]{khattak2019perception}\\ \hline
+InProceedings & \cite{khattak2019perception}\\ \hline
+InCollection & \cite{khattak2019perception}\\ \hline
+PhD Dissertation & \cite{khattak2019perception}\\ \hline
+Masters Thesis & \cite{khattak2019perception}\\ \hline
+Technical Report & \cite{khattak2019perception}\\ \hline
+Misc & \cite{khattak2019perception}\\ \hline
 \end{tabular}
 \caption{Citation Styles.}
 \label{t-References}
