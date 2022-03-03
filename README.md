@@ -1,8 +1,8 @@
 # NUST BS/MS/PhD Thesis Style
 
-The project is accessible as an (Overleaf template)[https://www.overleaf.com/latex/templates/nust-seecs-thesis/bmkdkrfxqdmb]
+The project is accessible as an [Overleaf template](https://www.overleaf.com/latex/templates/nust-seecs-thesis/bmkdkrfxqdmb)
 
-For the moment I have added a few NUST schools, being an open-source project, I will be happy to get valuable (feedback and additional)[https://github.com/hasanalikhattak/nust-thesis/issues] features from colleagues and students to further stabilize and improve the project, Happy exploring
+For the moment I have added a few NUST schools, being an open-source project, I will be happy to get valuable [feedback and additional](https://github.com/hasanalikhattak/nust-thesis/issues) features from colleagues and students to further stabilize and improve the project, Happy exploring
 
 Hasan Ali Khattak
 https://github.com/hasanalikhattak
