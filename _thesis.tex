@@ -1,0 +1,243 @@
+\documentclass[11pt,a4paper,oneside]{book} %scrbook book report
+
+% Essential packages
+\usepackage{amsmath, amssymb, amsthm} % AMS Packages
+\usepackage{graphicx,color}           % Packages for graphics and color
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+
+% Optional customization packages
+\usepackage{lmodern}                  % Custom fonts
+\usepackage[T1]{fontenc}              % Ensure correct font encoding
+
+\usepackage{url}
+
+% Customising chapter headings - sectsty.pdf
+\usepackage{sectsty}
+\chapterfont{\Large\sc\centering}
+\chaptertitlefont{\centering}
+\subsubsectionfont{\centering}
+
+\usepackage[hang, small, bf, margin=0pt, tableposition=bottom]{caption}
+\setlength{\abovecaptionskip}{10pt}   % Custom captions
+
+% Tables
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.83}
+
+\newcolumntype{x}{>{\columncolor{Gray}}c}
+\newcolumntype{y}{>{\columncolor{white}}c}
+
+% Page layout
+\parindent 0pt
+\parskip 1ex
+\renewcommand{\baselinestretch}{1.49}
+\numberwithin{equation}{section}
+\renewcommand{\bibname}{References}
+\renewcommand{\contentsname}{Contents}
+\pagenumbering{roman}
+
+
+\newcommand{\acrolabel}[1]{\makebox[3cm][l]{\textbf{#1}}}
+\newenvironment{acronyms}{\begin{list}{}{\renewcommand{\makelabel}{\acrolabel}}}{\end{list}}
+
+% \includeonly{tex/chapter1}          % Option to generate specific chapters
+
+% Customising headers - fancyhdr.pdf
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{}
+\lhead{\nouppercase{\textsc{\leftmark}}}
+\renewcommand{\headrulewidth}{0pt}
+\makeatletter
+\renewcommand{\chaptermark}[1]{\markboth{\textsc{\@chapapp}\ \thechapter:\ #1}{}}
+\makeatother
+
+
+% Hyperreferencing and citations
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Section symbol
+\usepackage{cleveref}
+\crefname{section}{\S}{\S\S}
+\Crefname{section}{\S}{\S\S}
+\crefname{subsection}{\S}{\S\S}
+\Crefname{subsection}{\S}{\S\S}
+
+
+\usepackage{tabu}
+\usepackage{adjustbox}
+\usepackage{booktabs}% for better rules in the table
+\usepackage{graphicx}
+%\usepackage{subfigure}
+%\usepackage{color}
+%\usepackage{colortbl}
+%\usepackage{soul}
+%\usepackage{listings}
+%\lstloadlanguages{Java,XML}
+%\lstset{frame=lines}
+\usepackage{./styles/astron}
+%\usepackage{xspace}
+%\usepackage[leqno]{amsmath}
+%\usepackage{hyperref}
+%\usepackage{sfmath}
+%\usepackage{setspace} 
+\usepackage{./styles/nust}
+\graphicspath{{./img/}{./figs/}}
+
+\title{Main Title}
+%\subtitle{A sub-title}
+
+\author{Student Name}
+\regno{Spring-2022-MS-CS CMSID School}
+\degree{\MSIT} % MSCSE, MSCCS
+\school{\SEECS}
+
+\adviser{Supervisor Name }
+\adviserAffiliation{Department of Computing }
+
+\date{February 2022}
+
+% \setcounter{tocdepth}{2}
+% \setstretch{1.1}
+% \linespread{1.1}
+
+\begin{document}
+\maketitle
+
+\thesisAcceptanceCertificate
+
+\evaluationcommitteeapproval{Member 1}{Member 2}{Member 3}
+
+\chapter*{Dedication}
+This thesis is dedicated to all the deserving children who do not have access to quality education especially young girls.
+
+\certificateoforiginality
+
+\acknowledgement{Glory be to Allah (S.W.A), the Creator, the Sustainer of the Universe. Who only has the power to honour whom He please, and to abase whom He please. Verily no one can do anything without His will. From the day, I came to NUST till the day of my departure, He was the only one Who blessed me and opened ways for me, and showed me the path of success. Their is nothing which can payback for His bounties throughout my research period to complete it successfully.
+}
+
+\tableofcontents
+\listoffigures
+\listoftables
+% \lstlistoflistings
+
+\chapter*{Abstract}
+Abstract\ldots
+
+\resetpagenumbering
+
+\chapter{Introduction and Motivation}\label{c-intro}
+
+This is a general introduction to what the thesis proposal is all about. Keep in mind that it is not just a description of the contents of each section. 
+
+Briefly summarize the research question(s), some of the reasons why it is a worthwhile question. Details of these questions will be stated in the later sections. It also recommended giving a birds-eye-view of the candidate solutions and possible out comes.
+
+\section{Problem Statement and Contribution}
+Different disciplines have varying naming conventions. In engineering, thesis tend to refer to problem(s) to be solved where other disciplines talk in terms of question(s) to be answered. In either case, this section has three main parts:
+
+\begin{itemize}
+  \item A concise statement of the question(s) that your thesis shall tackle.
+  \item Justification, by direct reference to literature review from previous
+  section that your question is previously unanswered.
+  \item Discussion of why it is worthwhile to answer this question.
+\end{itemize}
+
+Since this is one of the sections that the readers are definitely looking for, describe the issues more clearly by dividing this section into multiple subsections such as a spate section for ``Aims", another for listing ``Original Contributions", and yet another for mentioning the ``Limitations".
+
+\chapter{Literature Review}\label{c-review}
+Here you review the state of the art relevant to your thesis proposal. The idea is to present the major ideas in the state of the art right up to, but not including, your own personal brilliant ideas.
+
+Critical analysis and comparisons should be made by pointing out the weakness of existing solutions and strengths of your proposal. You organize this section by idea, and not by author or by publication.
+
+In certain situations, a background of the underlying concepts is required for better understanding of the research problem and also to improve the flow of the thesis. This could either be made an introductory part of this section or separately written in a prior section.
+
+\begin{table}[!th]
+\centering
+% Use, for example, p{3.5cm} style for fixed sized columns
+% consider using vbox to ensure large text is wrapped inside a column
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+\textbf{Reference Type} & \textbf{Citation}\\ \hline
+Article & \cite{iqbal2018generic}\\ \hline
+Book & \cite[p.127-133]{tayyaba20205g}\\ \hline
+InProceedings & \cite{khattak2019perception}\\ \hline
+InCollection & \cite{khattak2019perception}\\ \hline
+PhD Dissertation & \cite{khattak2019perception}\\ \hline
+Masters Thesis & \cite{khattak2019toward}\\ \hline
+Technical Report & \cite{khattak2019perception}\\ \hline
+Misc & \cite{khattak2014coap}\\ \hline
+\end{tabular}
+\caption{Citation Styles.}
+\label{t-References}
+\end{table}
+
+
+
+\chapter{Design and Methodology}
+\label{c-methods}
+
+This part of the thesis is much more free-form. It may have several subsections. But it all has only one purpose: to convince the examiners about the answer to the research question(s) or solution to the problem(s) that you set for yourself in the proposal.
+
+\begin{definition}[Testing 1,2,3]
+This definition is placed within a chapter so is its number.
+\end{definition}
+
+\begin{figure}[htp]
+\begin{center}
+  \includegraphics[width=0.7\columnwidth]{nust.jpg}
+  \caption{NUST Emblem.}
+  \label{f-nust}
+\end{center}
+\end{figure}
+
+
+\chapter{Implementation and Results}
+\label{c-results}
+
+So show what you did so far (implementation and testing) that is relevant to
+answering the question(s) or solving the problem(s).
+
+
+\input{chapters/chapter1-intro}
+\input{chapters/chapter2-literature}
+
+\chapter{Conclusion}
+\label{c-conclusion}
+
+You generally cover two things in this section, and each of these usually merits
+a separate subsection: \textit{Conclusions} and \textit{Summary of
+Contributions}.
+
+Conclusions are not a rambling summary of the thesis: they are short, concise
+statements of the inferences made in this thesis. It helps to organize these as
+short numbered paragraphs, ordered from most to least important. All conclusions
+should be directly related to the research question(s) stated earlier.
+
+The Summary of Contributions will be much sought and carefully read by the
+examiners. Here you list the contributions of new knowledge that your thesis
+would make. Of course, the thesis itself must substantiate any claims made here.
+There is often an overlap with the conclusions, but that's okay. Concise numbered
+paragraphs are again best. Organize from most to least important.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\begin{appendix}
+\chapter{First Appendix}
+The separate numbering of appendices is also supported by LaTeX. The \textit{appendix} macro can be used to indicate that following chapters are to be numbered as appendices. Only use the \textit{appendix} macro once for all appendices.
+\end{appendix}
+
+\pagenumbering{gobble}
+\include{checklista}
+\include{checklistb}
+\end{document}
